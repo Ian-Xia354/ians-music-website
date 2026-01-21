@@ -1,0 +1,140 @@
+/*
+Color and padding for body texts
+ */
+body {
+    background-color: grey; /* sets color for the app background */
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Optima", sans-serif;
+    margin: 0;
+}
+
+/* grid display for each artist image/button */
+.artist-grid {
+    display: grid; /* creates a grid-based layout, arranging elements in rows/columns */
+    gap: 40px;                     /* space between items */
+    justify-items: center;          /* center content inside each cell horizontally */
+    padding: 20px;                  /* padding around the grid */
+    grid-template-columns: repeat(4, 1fr);
+}
+.artist-grid a img { /* targets all image elements inside .artist-grid */
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;            /* rounded corners */
+    cursor: pointer;
+    transition: transform 0.2s; /* smoothens image transition */
+}
+
+
+/* adds hovering functionality for each artist image */
+.artist-grid a img:hover {
+    transform: scale(1.05);         /* slight zoom on hover */
+}
+
+
+/*
+Alignment and color for each song page
+ */
+.song {
+    background-color: darkgrey;
+    text-align: center;
+    font-family: "Optima", sans-serif;
+}
+
+.song img {
+    width: 250px;
+    height: 250px;
+}
+
+.song pre {
+    font-family: Verdana, sans-serif;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;    /* centers buttons horizontally */
+    gap: 20px;                  /* space between buttons */
+}
+
+.buttons button {
+    font-size: 25px;
+    background-color: black;    /* only button black */
+    color: white;
+    border-radius: 25px;        /* round corners */
+    padding: 10px 30px;         /* nice button size */
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: "Optima", sans-serif;
+    width: 400px;
+}
+
+/* Hover effect for buttons */
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* Creates a navigation bar at top of page */
+.navbar {
+    position: fixed;      /* keeps navbar at the top while scrolling*/
+    top: 0;               /* 0 pixels from top */
+    left: 0;              /* 0 pixels from left */
+    width: 100%;          /* spans full width */
+    background-color: black; /* sets background color of navbar to black */
+    display: flex; /* horizontal layout */
+    gap: 10px;            /* space between links */
+    padding: 10px 20px; /* Adds 10 pixels padding top/bottom and 20 pixels left/right inside the navbar */
+    z-index: 1000;        /* ensures the navbar stays on top of all other content */
+    font-family: "Optima", sans-serif;
+    color: white;
+}
+
+/* centering class */
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.artist-homePage {
+    background-color: lightgrey;
+    font-family: "Optima", sans-serif;
+    width: 100%;
+}
+
+.artist-homePage-name {
+    text-align: center;
+    font-size: 75px;
+}
+
+.artist-homePage-image {
+    width: 400px;
+    height: 400px;
+}
+
+.artist-info {
+    display: flex;
+    gap: 40px;
+    padding:40px;
+    background-color: darkgrey;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
